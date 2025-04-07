@@ -1,11 +1,14 @@
-import LoginPanel from "./components/Login/Login"
-import { Routes, Route } from "react-router-dom";
+import LoginPanel from "./components/Login/Login";  
+import Register from "./components/Register/Register"; // Importar el componente Register  
+import { Routes, Route } from "react-router-dom";  
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/login" element={<LoginPanel />} />
-    </Routes>
-  );
-}
-export default App;
+function App() {  
+  return (  
+    <Routes>  
+      <Route path="/login" element={<LoginPanel />} />  
+      <Route path="/register" element={<Register />} />
+    </Routes>  
+  );  
+}  
+
+export default App;  
