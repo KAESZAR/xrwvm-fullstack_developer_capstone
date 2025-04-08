@@ -76,15 +76,22 @@ app.get('/fetchDealers/:state', async (req, res) => {
     }  
   }); 
 
-// Express route to fetch dealer by a particular id 
+// Express route to fetch dealer by a particular id  
 app.get('/fetchDealer/:id', async (req, res) => {  
-    try {  
-      const document = await Dealerships.find({ id: req.params.id }); // Busca usando el campo 'id'  
-      res.json(document);  
-    } catch (error) {  
-      res.status(500).json({ error: 'Error fetching document' });  
+  try {  
+    // Busca el documento usando el campo 'id'  
+    const document = await Dealerships.findOne({ id: req.params.id });  
+    
+    // Manejar el caso en que no se encuentra el documento  
+    if (!document) {  
+      return res.status(404).json({ error: 'Dealer not found' });  
     }  
-  });  
+
+    res.json(document);  
+  } catch (error) {  
+    res.status(500).json({ error: 'Error fetching document' });  
+  }  
+});  
 
 //Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
