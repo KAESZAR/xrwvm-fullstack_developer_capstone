@@ -14,7 +14,7 @@ import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
-
+from .models import CarMake, CarModel
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -77,7 +77,20 @@ def logout_request(request):
     # Get the username from session to return in the response  
     username = request.user.username if request.user.is_authenticated else ""  
     data = {"userName": username}  
-    return JsonResponse(data)  
+    return JsonResponse(data)
+    
+# Add method to ges list of cars
+@csrf_exempt  
+def get_cars(request):
+    count = CarMake.objects.filter().count()
+    print(count)
+    if(count == 0):
+        initiate()
+    car_models = CarModel.objects.select_related('car_make')
+    cars = []
+    for car_model in car_models:
+        cars.append({"CarModel": car_model.name, "CarMake": car_model.car_make.name})
+    return JsonResponse({"CarModels":cars})
      
 # Create a `registration` view to handle sign up request
 # @csrf_exempt
