@@ -7,7 +7,10 @@ from .views import login_user, logout_request
 
 app_name = 'djangoapp'
 urlpatterns = [
-    # # path for registration
+    # view get_dealership
+    path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),
+    path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),
+    # path for registration
     path(route='registration/', view=views.registration, name='registration'),
     # path for login
     path(route='login', view=views.login_user, name='login'),
