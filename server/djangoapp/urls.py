@@ -7,6 +7,8 @@ from .views import login_user, logout_request
 
 app_name = 'djangoapp'
 urlpatterns = [
+    # Path get_dealer_reviews
+    path(route='reviews/dealer/<int:dealer_id>', view=views.get_dealer_reviews, name='dealer_details'),
     # Path get_dealer_details
     path(route='dealer/<int:dealer_id>', view=views.get_dealer_details, name='dealer_details')
     # view get_dealership
