@@ -124,3 +124,53 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+body {  
+    background-color: #f8f9fa; /* Color de fondo */  
+    font-family: Arial, sans-serif; /* Tipografía */  
+}  
+
+h1, h3 {  
+    color: darkturquoise; /* Color de encabezados */  
+    text-align: center; /* Centrar encabezados */
+    font-size: x-large;
+     
+}  
+
+.contact-info {  
+    margin: 30px 0; /* Margen superior e inferior */  
+    text-align: left; /* Alinear a la izquierda */  
+}  
+
+.feedback {  
+    margin-top: 30px; /* Margen superior */  
+    background-color: #ffffff; /* Fondo blanco para el formulario */  
+    padding: 20px; /* Padding interno */  
+    border-radius: 8px; /* Bordes redondeados */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */  
+}  
+.contact-container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: flex-start; /* Alineación superior */  
+    margin-top: 50px;  
+}  
+.contact-icon {  
+    flex: 0 0 auto; /* Para que el icono no crezca */  
+    text-align: center;  
+    width: 150px; /* Ancho fixed para el icono */  
+    margin-right: 20px; /* Espacio entre el icono y el formulario */  
+}  
+.contact-icon img {  
+    max-width: 100%;  
+    height: auto;  
+    width: 80%; /* Ajustar el tamaño del icono al 80% del contenedor */  
+}  
+.divider {  
+    width: 2px;  
+    background-color: lightgray;  
+    height: 300px; /* Tamaño del divisor */  
+}  
+.contact-form {  
+    flex: 1;  
+} 
