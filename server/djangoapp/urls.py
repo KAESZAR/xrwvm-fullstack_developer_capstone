@@ -8,7 +8,6 @@ app_name = 'djangoapp'
 urlpatterns = [
 
     # path for registration
-    
     path('registration/', views.registration, name='registration'),  # Nueva ruta  
 
     # path for login
@@ -16,6 +15,9 @@ urlpatterns = [
 
     # path for logout
     path(route='logout/', view=views.logout_request, name='logout'),
+
+    # path get_cars
+    path(route='get_cars', view=views.get_cars, name ='getcars'),
 
     # path for dealer reviews view
 
