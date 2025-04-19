@@ -1,7 +1,7 @@
 import LoginPanel from "./components/Login/Login";
 import { Routes, Route } from "react-router-dom";
 import Dealers from './components/Dealers/Dealers';
-import Dealer from "./components/Dealers/Dealer";
+import Dealer from "./components/Dealers/Dealer"
 
 function App() {
   return (
@@ -13,3 +13,4 @@ function App() {
   );
 }
 export default App;
+
