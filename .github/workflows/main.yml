@@ -32,7 +32,6 @@ jobs:
     - name: Run Linter
       run: |
         pwd
-        # Configure flake8 to allow longer lines (120 characters)
         flake8 --max-line-length=120
         echo "Linted all the python files successfully"
 
