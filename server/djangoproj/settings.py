@@ -17,7 +17,7 @@ SECRET_KEY =\
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
+        'localhost',
     'https://cebrulean-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
 ]
 
@@ -83,32 +83,33 @@ DATABASES = {
     }
 }
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': (
-            'django.contrib.auth.password_validation.'
-            'UserAttributeSimilarityValidator'
-        ),
-    },
-    {
-        'NAME': (  
-        'django.contrib.auth.password_validation.'
-        'MinimumLengthValidator'
-        ),
-    },
-    {
-        'NAME': ( 
-        'django.contrib.auth.password_validation.'
-        'CommonPasswordValidator'
-        ),
-    },
-    {
-        'NAME': ( 
-        'django.contrib.auth.password_validation.'
-        'NumericPasswordValidator'
-        ),
-    },
-]
+86| AUTH_PASSWORD_VALIDATORS = [
+87|     {
+88|         'NAME': (
+89|             'django.contrib.auth.password_validation.'
+90|             'UserAttributeSimilarityValidator'
+91|         ),
+92|     },
+93|     {
+94|         'NAME': (
+95|             'django.contrib.auth.password_validation.'
+96|             'MinimumLengthValidator'
+97|         ),
+98|     },
+99|     {
+100|         'NAME': (
+101|             'django.contrib.auth.password_validation.'
+102|             'CommonPasswordValidator'
+103|         ),
+104|     },
+105|     {
+106|         'NAME': (
+107|             'django.contrib.auth.password_validation.'
+108|             'NumericPasswordValidator'
+109|         ),
+110|     },
+111| ]
+147|
 
 
 # Internationalization
@@ -143,5 +144,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build'),
     os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
-
 
