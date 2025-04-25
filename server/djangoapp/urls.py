@@ -8,7 +8,7 @@ app_name = 'djangoapp'
 urlpatterns = [
 
     # path for registration
-    path('registration/', views.registration, name='registration'),  # Nueva ruta  
+    path('registration/', views.registration, name='registration'),
 
     # path for login
     path(route='login', view=views.login_user, name='login'),
@@ -17,7 +17,7 @@ urlpatterns = [
     path(route='logout/', view=views.logout_request, name='logout'),
 
     # path get_cars
-    path(route='get_cars', view=views.get_cars, name ='getcars'),
+    path(route='get_cars', view=views.get_cars, name='getcars'),
 
     # path for dealer reviews view
     path(route='get_dealers/', view=views.get_dealerships, name='get_dealers'),
@@ -30,4 +30,3 @@ urlpatterns = [
     path(route='add_review', view=views.add_review, name='add_review'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
