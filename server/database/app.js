@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
@@ -22,7 +23,7 @@ const Dealerships = require('./dealership');
   try {
     await Reviews.deleteMany({});
     await Reviews.insertMany(reviewsData.reviews);
-    
+
     await Dealerships.deleteMany({});
     await Dealerships.insertMany(dealershipsData.dealerships);
   } catch (error) {
